@@ -15,18 +15,17 @@
   fhdv =  first half day volunteers
   shdv = second half day volunteers
   fdv = full day volunteers
+  vname = volunteer name
 -->
   <div class="no-print">
-    <form>
-      <label for="fname">MOD Name</label>
-      <input type="name" id="MODname" name="fname"/>
+    <form id="form">
       <label for="lname">Number of 9:15-1:00 volunteers</label>
-      <input type="number" style="width: 3rem" id="fhdv">
+      <input type="number" style="width: 3rem" id="fhdv" required>
       <label for="lname">Number of 12:00-4:30 volunteers</label>
-      <input type="number" style="width: 3rem" id="sdhv">
+      <input type="number" style="width: 3rem" id="shdv" required>
       <label for="lname">Number of full day volunteers</label>
-      <input type="number" style="width: 3rem" id="fdv">
-      <input type="submit" value="Submit">
+      <input type="number" style="width: 3rem" id="fdv" required>
+      <button type="button" onclick="buttonClickHandler()">Generate</button>
     </form> 
   </div>
   <div>
@@ -47,8 +46,8 @@
             <th>4:00-4:30</th>
           </tr>
           <tr>
+            <td><input type="name" id="MODname" name="fname"/></td>
             <td>MOD</td>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -62,7 +61,7 @@
             <td></td>
           </tr>
           <tr>
-            <td><input type="text" id="fname" name="fname"/></td>
+            <td><input type="text" id="vname" name="vname"/></td>
             <td>Francisco Chang</td>
             <td>Mexico</td>
           </tr>  
@@ -70,12 +69,17 @@
       </div>
       <script type="text/javascript">
 
-      function startProgram() {
-        console.log("hello world");
-        console.log(run());
+      function buttonClickHandler() {
+        console.log("hello");
+        var fhdv = document.getElementById("fhdv").value;
+        var shdv = document.getElementById("shdv").value;
+        var fdv = document.getElementById("fdv").value;
+        if(fhdv === "" || shdv === "" || fdv === ""){
+          alert('All values have to be filled!');
+          return null;
+        }
+        generateSchedule(fhdv,shdv,fdv);
       }
-
-      startProgram();
 
       </script>
 </body>
