@@ -3,20 +3,51 @@ table, th, td {
     border-collapse: collapse;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
   }
 input, label, button {
     float:left;
     margin:10px;
     
 }
-#MODname, #vname {
-    border-width:0px;
-    border:none;
-    outline:none;
-}
+#form {
+    margin-left: 20%
 
-@media print{    
+}
+#MODname, #vname{
+    border-width: 0px;
+    border: none;
+    outline: none;
+}
+.display-on-print{
+    display: none;
+}
+@media print { 
     .no-print{
-        display: none ;
+        display: none;
+    }
+    .display-on-print{
+        display: contents;
+    }
+    #date {
+        border-width: 0px;
+        border: none;
+        outline: none;
+    }
+}
+.date-volunteer{
+    margin: 0;
+    display:inline;
+    float:left;
+}
+#date {
+    width: 20rem;
+    font-size: x-large;
+
+}
+@media print{    
+    @page {
+        size: landscape;
+        border: 20px solid blue;
     }
 }

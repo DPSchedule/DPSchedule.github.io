@@ -25,11 +25,20 @@
       <input type="number" style="width: 3rem" id="shdv" required>
       <label for="lname">Number of full day volunteers</label>
       <input type="number" style="width: 3rem" id="fdv" required>
+      
       <button type="button" onclick="buttonClickHandler()">Generate</button>
-    </form> 
+    </form>
   </div>
-  <div>
-      <table>
+  <div class="display-on-print">
+    <img src="discovery_place.jfif" width="33%" alt="discovery_place">
+    <p>DAILY SCHEDULE | SCIENCE AND NATURE</p>
+  </div>
+  <div class="print">
+    <div class="date-volunteer">
+      <input type="string" id="date">
+      <p>(Volunteer Schedule)</p>
+    </div>
+      <table WIDTH="100%">
           <tr>
             <th>Team Member</th>
             <th>9:15-10:00</th>
@@ -65,12 +74,10 @@
             <td>Francisco Chang</td>
             <td>Mexico</td>
           </tr>  
-        </table> 
+        </table>
       </div>
       <script type="text/javascript">
-
       function buttonClickHandler() {
-        console.log("hello");
         var fhdv = document.getElementById("fhdv").value;
         var shdv = document.getElementById("shdv").value;
         var fdv = document.getElementById("fdv").value;
@@ -80,7 +87,6 @@
         }
         generateSchedule(fhdv,shdv,fdv);
       }
-
       </script>
 </body>
 </html>
