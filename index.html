@@ -54,13 +54,22 @@
           alert('All values have to be filled!');
           return null;
         }
-        createScoreboardTable();
+        fhdv = parseInt(fhdv);
+        shdv = parseInt(shdv);
+        fdv = parseInt(fdv);
+        if(fhdv < 0 || fdv < 0 || shdv < 0) {
+        alert('Values must be 0 or greater!')
+        return null
+        }
+        generateSchedules(fhdv,shdv,fdv);
         document.getElementById("generate").disabled = true;
       }
       function removeTable() {
         document.getElementById("scoreboard-table").remove();
         document.getElementById("generate").disabled = false;
       }
+
+
       </script>
 </body>
 </html>

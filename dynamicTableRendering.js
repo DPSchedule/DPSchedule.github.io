@@ -4,23 +4,22 @@ var scoreboardTableHead;
 var scoreboardTableHeaderRow;
 var scoreboardTableBody;
 var scoreHeader;
-let tableHeaders = ["Team Member","9:15-10:00","10:00-11:00","11:00-11:30","11:30-12:00","12:00-12:30","12:30-1:00","1:00-1:30","1:30-2:00","2:00-3:00","3:00-4:00","4:00-4:30"]
 
-function createScoreboardTable (){
+function createScoreboardTable (tableHeaders){
     masterTableDiv = document.querySelector('.master_Table')
 
     createTable();
 
     createTableHead();
 
-    createTableHeadRow()
+    createTableHeadRow();
     
-    addTableHeaders()
+    addTableHeaders(tableHeaders);
     
     scoreboardTableHead.append(scoreboardTableHeaderRow) 
     scoreboardTable.append(scoreboardTableHead)
 
-    createTableBody()
+    createTableBody();
 
     scoreboardTable.append(scoreboardTableBody) 
     masterTableDiv.append(scoreboardTable)
@@ -43,7 +42,7 @@ function createTableHeadRow(){
     scoreboardTableHeaderRow.className = 'scoreboardTableHeaderRow'
 }
 
-function addTableHeaders(){
+function addTableHeaders(tableHeaders){
     tableHeaders.forEach(header => {
         scoreHeader = document.createElement('th') 
         scoreHeader.innerText = header
