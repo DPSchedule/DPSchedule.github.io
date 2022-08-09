@@ -32,13 +32,15 @@
   <div class="display-on-print">
     <img src="discovery_place.jfif" width="33%" alt="discovery_place">
     <p>DAILY SCHEDULE | SCIENCE AND NATURE</p>
+    <hr>
   </div>
   <div class="print">
     <div class="date-volunteer">
       <input type="text" id="date">
       <label for="date" id="volunteerScheduleTitle">(Volunteer Schedule)</label>
     </div>
-      <table WIDTH="100%">
+    <div class="master_Table">
+      <table WIDTH="100%" id="table">
           <tr>
             <th>Team Member</th>
             <th>9:15-10:00</th>
@@ -71,11 +73,10 @@
           </tr>
           <tr>
             <td><input type="text" id="vname" name="vname"/></td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
           </tr>  
         </table>
       </div>
+    </div>
       <script type="text/javascript">
       function buttonClickHandler() {
         var fhdv = document.getElementById("fhdv").value;
@@ -85,7 +86,7 @@
           alert('All values have to be filled!');
           return null;
         }
-        generateSchedule(fhdv,shdv,fdv);
+        addColumn(fhdv,shdv,fdv);
       }
       </script>
 </body>

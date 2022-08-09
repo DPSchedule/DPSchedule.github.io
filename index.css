@@ -4,6 +4,7 @@ table, th, td {
     justify-content: center;
     align-items: center;
     font-size: 12px;
+    
   }
 input, label, button {
     float:left;
@@ -34,6 +35,10 @@ input, label, button {
         border: none;
         outline: none;
     }
+    table, th, td {
+        border: .5px solid black;
+        font-size: 10px;
+    }
 }
 .date-volunteer{
     margin: 0;
@@ -46,8 +51,10 @@ input, label, button {
     display: inline-block;
     font-family: Times;
     font-weight: bold;
-    
-
+}
+hr {
+    width: 33%;
+    margin-left: 0%;
 }
 #volunteerScheduleTitle{
     margin-top: 2.75%;
@@ -57,12 +64,4 @@ input, label, button {
 .date-volunteer{
     margin-bottom: 1%;
     font-weight: bold;
-    
-    
-}
-@media print{    
-    @page {
-        size: landscape;
-        border: 20px solid blue;
-    }
 }
