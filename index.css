@@ -41,9 +41,24 @@ input, label, button {
     float:left;
 }
 #date {
-    width: 20rem;
+    width: 25rem;
     font-size: x-large;
+    display: inline-block;
+    font-family: Times;
+    font-weight: bold;
+    
 
+}
+#volunteerScheduleTitle{
+    margin-top: 2.75%;
+    font-size: larger;
+    
+}
+.date-volunteer{
+    margin-bottom: 1%;
+    font-weight: bold;
+    
+    
 }
 @media print{    
     @page {
