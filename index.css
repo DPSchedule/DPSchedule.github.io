@@ -1,11 +1,13 @@
-table, th, td {
+.table, th, .td {
     border: 1px solid black;
     border-collapse: collapse;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
-    
-  }
+    font-size: 12px;  
+}
+table {
+    width: 100%;
+}
 input, label, button {
     float:left;
     margin:10px;
@@ -35,7 +37,7 @@ input, label, button {
         border: none;
         outline: none;
     }
-    table, th, td {
+    .table, .th, .td {
         border: .5px solid black;
         font-size: 10px;
     }

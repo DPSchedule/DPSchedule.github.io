@@ -9,6 +9,7 @@
     <title>DP Schedule</title>
 </head>
 <body>
+  <script src="dynamicTableRendering.js"></script>
   <script src="scheduleCreator.js"></script>
   
 <!---
@@ -26,7 +27,8 @@
       <label for="lname">Number of full day volunteers</label>
       <input type="number" style="width: 3rem" id="fdv" required>
       
-      <button type="button" onclick="buttonClickHandler()">Generate</button>
+      <button type="button" id="generate" onclick="generateTableHandeler()">Generate</button>
+      <button type="button" id="reset" onclick="removeTable()">Reset</button>
     </form>
   </div>
   <div class="display-on-print">
@@ -39,46 +41,12 @@
       <input type="text" id="date">
       <label for="date" id="volunteerScheduleTitle">(Volunteer Schedule)</label>
     </div>
-    <div class="master_Table">
-      <table WIDTH="100%" id="table">
-          <tr>
-            <th>Team Member</th>
-            <th>9:15-10:00</th>
-            <th>10:00-11:00</th>
-            <th>10:00-11:00</th>
-            <th>11:00-11:30</th>
-            <th>11:30-12:00</th>
-            <th>12:00-12:30</th>
-            <th>12:30-1:00</th>
-            <th>1:00-1:30</th>
-            <th>1:30-2:00</th>
-            <th>2:00-3:00</th>
-            <th>3:00-4:00</th>
-            <th>4:00-4:30</th>
-          </tr>
-          <tr>
-            <td><input type="name" id="MODname" name="fname"/></td>
-            <td>MOD</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>   
-            <td></td>
-          </tr>
-          <tr>
-            <td><input type="text" id="vname" name="vname"/></td>
-          </tr>  
-        </table>
+    <div class="master_Table" id="master-table">
+      
       </div>
     </div>
       <script type="text/javascript">
-      function buttonClickHandler() {
+      function generateTableHandeler() {
         var fhdv = document.getElementById("fhdv").value;
         var shdv = document.getElementById("shdv").value;
         var fdv = document.getElementById("fdv").value;
@@ -86,7 +54,12 @@
           alert('All values have to be filled!');
           return null;
         }
-        addColumn(fhdv,shdv,fdv);
+        createScoreboardTable();
+        document.getElementById("generate").disabled = true;
+      }
+      function removeTable() {
+        document.getElementById("scoreboard-table").remove();
+        document.getElementById("generate").disabled = false;
       }
       </script>
 </body>
