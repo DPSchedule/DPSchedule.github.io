@@ -5,7 +5,7 @@ var scoreboardTableHeaderRow;
 var scoreboardTableBody;
 var scoreHeader;
 
-function createScoreboardTable (tableHeaders){
+function renderTable (tableHeaders){
     masterTableDiv = document.querySelector('.master_Table')
 
     createTable();
