@@ -1,7 +1,7 @@
 
 
 let labList = ["EML","Thinker Space","EMM","EMF","Kid Science","Scipod Level 2","Scipod Level 1","Scipod Level 3"]
-const arr = [];
+var arr = [];
 
 function generateSchedules(fhdv,shdv,fdv){
     renderTable(["Team Member","9:15-10:00","10:00-11:00","11:00-11:30","11:30-12:00","12:00-12:30","12:30-1:00","1:00-1:30","1:30-2:00","2:00-3:00","3:00-4:00","4:00-4:30"])
@@ -21,13 +21,14 @@ function generateTable(fhdv,shdv,fdv) {
 
 function splitArray(fhdv1,shdv1,fdv1,labColumn1){
     const arr2 = [];
-    for(var e = 0; e < labColumn1/(fhdv1+shdv1+fdv1); e++){
-        arr2.push(labColumn1[e*(fhdv1+shdv1+fdv1)]);
-        labColumn1.splice(e*(fhdv1+shdv1+fdv1),1)
+    for(var t = 0; t < labColumn1.length/(fhdv1+shdv1+fdv1); t++){
+        for(var e = 0; e < labColumn1.length/(fhdv1+shdv1+fdv1); e++){
+            arr2.push(labColumn1[e*(fhdv1+shdv1+fdv1)]);
+            labColumn1.splice(e*(fhdv1+shdv1+fdv1),1)
+        }
+        arr2 = [];
+        renderTable(arr2);
     }
-    arr2 = [];
-    renderTable(arr2);
-
 }
 
 function generateLabValue() {
