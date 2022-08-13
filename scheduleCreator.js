@@ -30,14 +30,16 @@ function generateTable(fhdv,shdv,fdv) {
 function splitArray(fhdv1,shdv1,fdv1,labColumn1){
     var arr2 = [];
     console.log("SPLIT ARRAY");
-    for(var t = 1; t < labColumn1.length; t+(fhdv1+shdv1+fdv1)){ 
-        for (var w = 0; w < fhdv1+shdv1+fdv1; w++){
-            arr2.push(labColumn1[t-1])
+    for(var t = 1; t <= labColumn1.length; t++){
+
+        arr2.push(labColumn1[t-1])
+        if (t % 11 == 0){
+            arr2.unshift("")
+            addToTable(arr2)
+            arr2.length = 0;
+
         }
-        console.log("arr 2 " + arr2)
-        addToTable(arr2)
-        arr2.length = 0;
-    }
+    }    
 }
 
 function generateLabValue() {
