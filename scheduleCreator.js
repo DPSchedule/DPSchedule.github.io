@@ -25,6 +25,7 @@ function generateTable(fhdv,shdv,fdv) {
     }
     splitArray(fhdv,shdv,fdv,labColumn)
 }
+// SOMETHING WRONG WITH METHOD BELOW
 
 function splitArray(fhdv1,shdv1,fdv1,labColumn1){
     var arr2 = [];
