@@ -55,7 +55,6 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
                 }
                 shdv1--
                 addToTable(arr2)
-                
                 passOn1 = false
                
             }
