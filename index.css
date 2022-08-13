@@ -8,7 +8,7 @@
 table {
     width: 100%;
 }
-input, label, button {
+input, label, button{
     float:left;
     margin:10px;
     
@@ -37,9 +37,16 @@ input, label, button {
         border: none;
         outline: none;
     }
-    .table, .th, .td {
+    .scoreboardTable, #th, .td {
         border: .5px solid black;
-        font-size: 10px;
+        font-size: 8px;
+    }
+    #input-DOM{
+        border-width: 0px;
+        border: none;
+        outline: none;
+        
+
     }
 }
 .date-volunteer{
