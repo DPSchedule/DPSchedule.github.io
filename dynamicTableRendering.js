@@ -54,3 +54,11 @@ function createTableBody(){
     scoreboardTableBody.className = "scoreboardTable-Body"
 }
 
+function appendAll(){
+    scoreboardTableHead.append(scoreboardTableHeaderRow) 
+    scoreboardTable.append(scoreboardTableHead)
+
+    scoreboardTable.append(scoreboardTableBody) 
+    masterTableDiv.append(scoreboardTable)
+
+}
