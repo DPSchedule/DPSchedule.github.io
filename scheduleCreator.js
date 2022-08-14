@@ -8,7 +8,6 @@ function generateSchedules(fhdv,shdv,fdv){
     renderTable(["Team Member","9:15-10:00","10:00-11:00","11:00-11:30","11:30-12:00","12:00-12:30","12:30-1:00","1:00-1:30","1:30-2:00","2:00-3:00","3:00-4:00","4:00-4:30"])
     addToTable(["","MOD","","","","","","","","","",""])
     generateTable(fhdv,shdv,fdv)
-    
 }
 
 function generateTable(fhdv,shdv,fdv) {
@@ -25,7 +24,6 @@ function generateTable(fhdv,shdv,fdv) {
     }
     splitArray(fhdv,shdv,fdv,labColumn)
 }
-// SOMETHING WRONG WITH METHOD BELOW
 
 function splitArray(fhdv1,shdv1,fdv1,labColumn1){
     var arr2 = [];
@@ -43,8 +41,6 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
                 }
                 fhdv1--
                 passOn1 = false
-                
-                
             }
 
             if (shdv1 > 0 && passOn1){
@@ -52,15 +48,11 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
                     arr2[r] = "";
                 }
                 shdv1--
-                
                 passOn1 = false
-               
             }
-
             if (fdv1 > 0 && passOn1){
                 arr2[6] = "Lunch"
                 fdv1--
-                
             }
             addToTable(arr2)
             passOn1 = true

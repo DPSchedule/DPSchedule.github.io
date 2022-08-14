@@ -52,7 +52,7 @@ function createTableHeadRow(){
 }
 function createInput(){
     input = document.createElement("input")
-    input.type = "text"
+
     input.id = "input-DOM"
 }
 

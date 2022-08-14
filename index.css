@@ -8,9 +8,9 @@
 table {
     width: 100%;
 }
-input, label, button{
+#fhdv, #shdv, #fdv, #date, label, button{
     float:left;
-    margin:10px;
+    margin:5px;
     
 }
 #form {
@@ -45,6 +45,7 @@ input, label, button{
         border-width: 0px;
         border: none;
         outline: none;
+        width: 150px;
         
 
     }
