@@ -8,6 +8,9 @@ var input;
 var boolean;
 var counter = 1; 
 
+function reset(){
+    counter = 1; 
+}
 
 function renderTable (tableHeaders){   
 

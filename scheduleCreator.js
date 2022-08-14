@@ -42,8 +42,6 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
                     arr2[l] = "";
                 }
                 fhdv1--
-                addToTable(arr2)
-                
                 passOn1 = false
                 
                 
@@ -54,7 +52,7 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
                     arr2[r] = "";
                 }
                 shdv1--
-                addToTable(arr2)
+                
                 passOn1 = false
                
             }
@@ -62,13 +60,9 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
             if (fdv1 > 0 && passOn1){
                 arr2[6] = "Lunch"
                 fdv1--
-                addToTable(arr2)
-                if (fdv1 > 0){
-                    passOn1 = false
-                } else {
-                    passOn1 = true
-                }
+                
             }
+            addToTable(arr2)
             passOn1 = true
             arr2.length = 0;
         }
