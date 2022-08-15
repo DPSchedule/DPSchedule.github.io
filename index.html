@@ -20,11 +20,11 @@
 -->
   <div class="no-print">
     <form id="form">
-      <label for="lname">Number of 9:15-1:00 volunteers</label>
+      <label for="lname" id="formLabel">Number of 9:15-1:00 volunteers</label>
       <input type="number" style="width: 3rem" id="fhdv" required>
-      <label for="lname">Number of 12:00-4:30 volunteers</label>
+      <label for="lname" id="formLabel">Number of 12:00-4:30 volunteers</label>
       <input type="number" style="width: 3rem" id="shdv" required>
-      <label for="lname">Number of full day volunteers</label>
+      <label for="lname" id="formLabel">Number of full day volunteers</label>
       <input type="number" style="width: 3rem" id="fdv" required>
 
       <button type="button" id="generate" onclick="generateTableHandeler()">Generate</button>
@@ -36,54 +36,54 @@
     <p>DAILY SCHEDULE | SCIENCE AND NATURE</p>
     <hr>
   </div>
-  <div class="print">
-    <div class="date-volunteer">
-      <input type="text" id="date">
-      <label for="date" id="volunteerScheduleTitle">(Volunteer Schedule)</label>
-    </div>
-    <div class="master_Table" id="master-table">
+
+  <div class="date-volunteer">  
+    <input type="text" id="date">
+    <label for="date" id="volunteerScheduleTitle">(Volunteer Schedule)</label>
+  </div>
+
+  <div class="master_Table" id="master-table">
       
-      </div>
-     <div class = "extra-info">
-      <!--
-      <table id="extra-info-table" BORDER=1 WIDTH=10>
-        <tr>
-          <th>Program Schedule</th>
-        </tr>
-        <tr>
-          <td><input type="text" style="width: 3rem" id="fdv"</td>
-          <td>Touch Tank</td>
-          <td>EML</td>
-        </tr>
-        <tr>
-          <td><input type="text" style="width: 3rem" id="fdv"</td>
-          <td>Science at the Stage</td>
-          <td>The Stage</td>
-        </tr>
-        <tr>
-          <td><input type="text" style="width: 3rem" id="fdv"</td>
-          <td>Nose to Nose</td>
-          <td>Rainforest Th. Steps</td>
-        </tr>
-        <tr>
-          <td><input type="text" style="width: 3rem" id="fdv"</td>
-          <td>Touch Tank</td>
-          <td>EML</td>
-        </tr>
-        <tr>
-          <td><input type="text" style="width: 3rem" id="fdv"</td>
-          <td>Science at the Stage</td>
-          <td>The Stage</td>
-        </tr>
-        <tr>
-          <td><input type="text" style="width: 3rem" id="fdv"</td>
-          <td>Nose to Nose</td>
-          <td>Rainforest Th. Steps</td>
-        </tr>
-      </table>
-     </div> 
+  </div>
+  <div class = "extra-info">
+    <!--
+    <table id="extra-info-table" BORDER=1 WIDTH=10>
+      <tr>
+        <th>Program Schedule</th>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 3rem" id="fdv"</td>
+        <td>Touch Tank</td>
+        <td>EML</td>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 3rem" id="fdv"</td>
+        <td>Science at the Stage</td>
+        <td>The Stage</td>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 3rem" id="fdv"</td>
+        <td>Nose to Nose</td>
+        <td>Rainforest Th. Steps</td>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 3rem" id="fdv"</td>
+        <td>Touch Tank</td>
+        <td>EML</td>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 3rem" id="fdv"</td>
+        <td>Science at the Stage</td>
+        <td>The Stage</td>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 3rem" id="fdv"</td>
+        <td>Nose to Nose</td>
+        <td>Rainforest Th. Steps</td>
+      </tr>
+    </table>
      -->
-    </div>
+  </div>
       <script type="text/javascript">
       function generateTableHandeler() {
         var fhdv = document.getElementById("fhdv").value;

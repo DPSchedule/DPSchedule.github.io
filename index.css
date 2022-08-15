@@ -55,7 +55,7 @@ table {
 
 }
 
-label {
+#formLabel {
     float:left;
     margin:5px;
     padding:10px;
@@ -125,9 +125,17 @@ button{
     }
 }
 .date-volunteer{
-    margin: 0;
-    display:inline;
+    border-radius:10px;
+    color: black;
     float:left;
+    font-weight: bold;
+    margin-top:2%;
+}
+#volunteerScheduleTitle{
+    background-color:#fff;
+    height: 2rem;
+    width: 2rem;
+
 }
 #date {
     width: 25rem;
@@ -143,9 +151,4 @@ hr {
 #volunteerScheduleTitle{
     margin-top: 2.75%;
     font-size: larger;
-    
-}
-.date-volunteer{
-    margin-bottom: 1%;
-    font-weight: bold;
 }
