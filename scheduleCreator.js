@@ -15,11 +15,8 @@ function generateTable(fhdv,shdv,fdv) {
     for (var u = 0; u < ((fhdv + shdv + fdv)*11); u++){
         
         labColumn.push(generateLabValue())
-        console.log("LAB COLUMNN: ")
-        console.log(labColumn)
         if (((u+1) % (fhdv + shdv + fdv)) == 0){
             arr.length = 0;
-            console.log("u = " + u)
         }
     }
     splitArray(fhdv,shdv,fdv,labColumn)
@@ -28,7 +25,6 @@ function generateTable(fhdv,shdv,fdv) {
 function splitArray(fhdv1,shdv1,fdv1,labColumn1){
     var arr2 = [];
     var passOn1 = true; 
-    console.log("SPLIT ARRAY");
     for(var t = 1; t <= labColumn1.length; t++){
     
         arr2.push(labColumn1[t-1])
@@ -66,12 +62,10 @@ function generateLabValue() {
     var randomNumber;
     while (true){
         randomNumber = (Math.floor(Math.random() * 39) + 1)
-        console.log(randomNumber)
         labValue = randomAssignments(randomNumber)
         if(labValue == ""){
             continue
         } else {
-            console.log(labValue)
             return labValue
         }
     }
@@ -85,9 +79,7 @@ function randomAssignments(number){
             if(value){
                 return ""
             } else {
-                arr.push("Scipod Level 3")
-                console.log("IN SWITCH CASE")
-                console.log(arr)       
+                arr.push("Scipod Level 3") 
                 return "Scipod Level 3"
             }
         case ((number >=2) && (number <=3)):
@@ -96,8 +88,6 @@ function randomAssignments(number){
                 return ""
             } else {
                 arr.push("Scipod Level 1")
-                console.log("IN SWITCH CASE")
-                console.log(arr)   
                 return "Scipod Level 1"
             }
 
@@ -107,8 +97,6 @@ function randomAssignments(number){
                 return ""
             } else {
                 arr.push("Scipod Level 2")
-                console.log("IN SWITCH CASE")
-                console.log(arr)   
                 return "Scipod Level 2"
             }
 
@@ -118,8 +106,6 @@ function randomAssignments(number){
                 return ""
             } else {
                 arr.push("")
-                console.log("IN SWITCH CASE")
-                console.log(arr)   
                 return "Kid Science"
             }
 
@@ -129,8 +115,6 @@ function randomAssignments(number){
                 return ""
             } else {
                 arr.push("EMF")
-                console.log("IN SWITCH CASE")
-                console.log(arr)   
                 return "EMF"
             }
 
@@ -140,8 +124,6 @@ function randomAssignments(number){
                 return ""
             } else {
                 arr.push("EMM")
-                console.log("IN SWITCH CASE")
-                console.log(arr)   
                 return "EMM"
             }
 
@@ -151,8 +133,6 @@ function randomAssignments(number){
                 return ""
             } else {
                 arr.push("Thinker Space")
-                console.log("IN SWITCH CASE")
-                console.log(arr)   
                 return "Thinker Space" 
             }
 
@@ -162,17 +142,12 @@ function randomAssignments(number){
                 return ""
             } else {
                 arr.push("EML")
-                console.log("IN SWITCH CASE")
-                console.log(arr)   
                 return "EML"
             }
         }
     }
 
 function isInArray(valToCheck){
-    console.log("THE ARRAY:")
-    console.log(arr)
-    console.log("IS IN ARRAY: " + arr.includes(valToCheck))
     return arr.includes(valToCheck)
     
 }
