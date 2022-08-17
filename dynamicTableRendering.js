@@ -1,9 +1,9 @@
 var masterTableDiv;
-var scoreboardTable;
-var scoreboardTableHead;
-var scoreboardTableHeaderRow;
-var scoreboardTableBody;
-var scoreHeader;
+var table;
+var tableHead;
+var tableHeaderRow;
+var tableBody;
+var valHeader;
 var input;
 var boolean;
 var counter = 1; 
@@ -25,30 +25,30 @@ function renderTable (tableHeaders){
     
     addTableHeaders(tableHeaders);
     
-    scoreboardTableHead.append(scoreboardTableHeaderRow) 
-    scoreboardTable.append(scoreboardTableHead)
+    tableHead.append(tableHeaderRow) 
+    table.append(tableHead)
 
     createTableBody();
 
-    scoreboardTable.append(scoreboardTableBody) 
-    masterTableDiv.append(scoreboardTable)
+    table.append(tableBody) 
+    masterTableDiv.append(table)
 
     }
 
 function createTable(){
-    scoreboardTable = document.createElement('table')
-    scoreboardTable.className = 'scoreboardTable'
-    scoreboardTable.id = 'scoreboard-table'
+    table = document.createElement('table')
+    table.className = 'scoreboardTable'
+    table.id = 'scoreboard-table'
 }
 
 function createTableHead(){
-    scoreboardTableHead = document.createElement('thead') 
-    scoreboardTableHead.className = 'scoreboardTableHead'
+    tableHead = document.createElement('thead') 
+    tableHead.className = 'scoreboardTableHead'
 }
 
 function createTableHeadRow(){
-    scoreboardTableHeaderRow = document.createElement('tr') 
-    scoreboardTableHeaderRow.className = 'scoreboardTableHeaderRow'
+    tableHeaderRow = document.createElement('tr') 
+    tableHeaderRow.className = 'scoreboardTableHeaderRow'
 }
 function createInput(){
     input = document.createElement("input")
@@ -64,30 +64,30 @@ function addTableHeaders(tableHeaders){
     
     tableHeaders.forEach(header => {
         
-        scoreHeader = document.createElement('th') 
-        scoreHeader.id = "th"
-        scoreHeader.innerText = header
+        valHeader = document.createElement('th') 
+        valHeader.id = "th"
+        valHeader.innerText = header
         if (boolean && counter > 1){
-            scoreHeader.append(input)
+            valHeader.append(input)
         }
         boolean = false
         counter = counter + 1 
-        scoreboardTableHeaderRow.append(scoreHeader)
+        tableHeaderRow.append(valHeader)
     })
     
 }
 function createTableBody(){
-    scoreboardTableBody = document.createElement('tbody')
-    scoreboardTableBody.className = "scoreboardTable-Body"
+    tableBody = document.createElement('tbody')
+    tableBody.className = "scoreboardTable-Body"
 }
 
 function appendAll(){
 
-    scoreboardTableHead.append(scoreboardTableHeaderRow) 
-    scoreboardTable.append(scoreboardTableHead)
+    tableHead.append(tableHeaderRow) 
+    table.append(tableHead)
 
-    scoreboardTable.append(scoreboardTableBody) 
-    masterTableDiv.append(scoreboardTable)
+    table.append(tableBody) 
+    masterTableDiv.append(table)
     
 
 }
