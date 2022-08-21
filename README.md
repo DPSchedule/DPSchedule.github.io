@@ -4,13 +4,13 @@
 
 To use this program first go to the website [DPSchedule.github.io](https://DPSchedule.github.io)
 
-1). Next enter the parameters for `Number of 9:15-1:00 volunteers`, `Number of 12:00-4:30 volunteers`, and `Number of full day volunteers` Values must have to be 0 or greater and all parameters have to be filled before generating table
+1). Next enter the parameters for `Number of 9:15-1:00 volunteers`, `Number of 12:00-4:30 volunteers`, and `Number of full day volunteers` Values must have to be 0 or greater and all parameters have to be filled before generating table.
 
 2). Click the `Generate` button to create the table and the `Reset` button to remove the table.
 
-3). Once the table has been generated, enter the date next to the `Volunteer Schedule` text and volunteer / MOD names under `Team Member`
+3). Once the table has been generated, enter the date next to the `Volunteer Schedule` text and volunteer / MOD names under `Team Member`.
 
-4). Once complete, simply use Ctrl + P (Windows OS) or Cmd + P (Mac OS) to print the page. Make sure the page layout is set to landscape
+4). Once complete, simply use Ctrl + P (Windows OS) or Cmd + P (Mac OS) to print the page. Make sure the page layout is set to landscape.
 
 ## Compatability
 
