@@ -12,8 +12,7 @@ function generateSchedules(fhdv,shdv,fdv){
 
 function generateTable(fhdv,shdv,fdv) {
     var labColumn = [];
-    for (var u = 0; u < ((fhdv + shdv + fdv)*11); u++){
-        
+    for (var u = 0; u <  ((fhdv + shdv + fdv)*11 ); u++){
         labColumn.push(generateLabValue())
         if (((u+1) % (fhdv + shdv + fdv)) == 0){
             arr.length = 0;
@@ -23,37 +22,40 @@ function generateTable(fhdv,shdv,fdv) {
 }
 
 function splitArray(fhdv1,shdv1,fdv1,labColumn1){
+    var fhdv2 = fhdv1
+    var shdv2 = shdv1
+    var fdv2 = fdv1 
     var arr2 = [];
     var passOn1 = true; 
-    for(var t = 1; t <= labColumn1.length; t++){
-    
-        arr2.push(labColumn1[t-1])
-        if (t % 11 == 0){
-            arr2.unshift("")
-
-            if (fhdv1 > 0 && passOn1) {
-                for (var l = 7; l < 12; l++){
-                    arr2[l] = "";
-                }
-                fhdv1--
-                passOn1 = false
-            }
-
-            if (shdv1 > 0 && passOn1){
-                for (var r = 0; r < 5; r++){
-                    arr2[r] = "";
-                }
-                shdv1--
-                passOn1 = false
-            }
-            if (fdv1 > 0 && passOn1){
-                arr2[6] = "Lunch"
-                fdv1--
-            }
-            addToTable(arr2)
-            passOn1 = true
-            arr2.length = 0;
+    for(var t = 0; t < (fhdv1 + shdv1 + fdv1); t++){
+        for(var w = 0; w < 11; w++) {
+            
+            arr2.push(labColumn1[(fhdv1 + shdv1 + fdv1)*w+t])
         }
+        arr2.unshift("")
+
+        if (fhdv2 > 0 && passOn1) {
+            for (var l = 7; l < 12; l++){
+                arr2[l] = "";
+            }
+            fhdv2--
+            passOn1 = false
+        }
+
+        if (shdv2 > 0 && passOn1){
+            for (var r = 0; r < 5; r++){
+                arr2[r] = "";
+            }
+            shdv2--
+            passOn1 = false
+        }
+        if (fdv2 > 0 && passOn1){
+            arr2[6] = "Lunch"
+            fdv2--
+        }
+        addToTable(arr2)
+        passOn1 = true
+        arr2.length = 0;
     }    
 }
 
