@@ -77,7 +77,6 @@ button{
 
 }
 
-
 #MODname, #vname{
     border-width: 0px;
     border: none;
@@ -106,7 +105,7 @@ button{
         outline: none;
     }
     .scoreboardTable, #th, .td {
-        border: .5px solid black;
+        border: .2px solid black;
         font-size: 8px;
     }
     #input-DOM{
@@ -122,6 +121,29 @@ button{
         box-shadow: none;
         border: none;
 
+    }
+    .extra-info{
+        text-align:left;
+        
+    
+    }
+    #extra-info-table-program-schedule{
+        font-size: 30%;
+        width:30%;
+        margin-top: 1%;
+        
+    }
+    #extra-info-table-emergency-codes{
+        font-size: 30%;
+        width:20%;
+        margin-top: 1%;
+        
+    }
+    #program_schedule{
+        width:20%;
+    }
+    input{
+        display:none;
     }
 }
 .date-volunteer{
@@ -152,3 +174,16 @@ hr {
     margin-top: 2.75%;
     font-size: larger;
 }
+.extra-info{
+    text-align:left;
+    font-size: 70%;
+
+}
+#extra-info-table, #program_schedule{
+    width:25%;
+    
+}
+#extra-info-table1{
+    width:20%;
+}
+
