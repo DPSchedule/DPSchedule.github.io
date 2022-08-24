@@ -37,18 +37,18 @@ function renderTable (tableHeaders){
 
 function createTable(){
     table = document.createElement('table')
-    table.className = 'scoreboardTable'
-    table.id = 'scoreboard-table'
+    table.className = 'table'
+    table.id = 'tableID'
 }
 
 function createTableHead(){
     tableHead = document.createElement('thead') 
-    tableHead.className = 'scoreboardTableHead'
+    tableHead.className = 'tableHead'
 }
 
 function createTableHeadRow(){
     tableHeaderRow = document.createElement('tr') 
-    tableHeaderRow.className = 'scoreboardTableHeaderRow'
+    tableHeaderRow.className = 'tableHeaderRow'
 }
 function createInput(){
     input = document.createElement("input")
@@ -78,7 +78,7 @@ function addTableHeaders(tableHeaders){
 }
 function createTableBody(){
     tableBody = document.createElement('tbody')
-    tableBody.className = "scoreboardTable-Body"
+    tableBody.className = "table-Body"
 }
 
 function appendAll(){

@@ -9,7 +9,7 @@ body {
     align-items: center;
     font-size: 12px;  
 }
-table {
+#tableID {
     width: 100%;
 }
 .no-print{
