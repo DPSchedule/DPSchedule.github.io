@@ -138,6 +138,8 @@
     
   </div>
       <script type="text/javascript">
+      document.getElementsByClassName("extra-info")[0].style.visibility = "hidden";
+
       function generateTableHandeler() {
         var fhdv = document.getElementById("fhdv").value;
         var shdv = document.getElementById("shdv").value;
@@ -155,12 +157,14 @@
         }
         generateSchedules(fhdv,shdv,fdv);
         document.getElementById("generate").disabled = true;
+        document.getElementsByClassName("extra-info")[0].style.visibility = "visible";
       }
       
       function removeTable() {
-        document.getElementById("scoreboard-table").remove();
+        document.getElementById("tableID").remove();
         document.getElementById("generate").disabled = false;
         reset();
+        document.getElementsByClassName("extra-info")[0].style.visibility = "hidden";
       }
 
       </script>
