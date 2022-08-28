@@ -1,6 +1,7 @@
 body {
     background-color: #E5E4E2;
     text-align: center;
+    
     }
 .table, th, .td {
     border: 1px solid black;
@@ -98,6 +99,7 @@ button{
     }
     .display-on-print{
         display: contents;
+        
     }
     #date {
         border-width: 0px;
@@ -125,17 +127,17 @@ button{
     .extra-info{
         text-align:left;
         display: grid;
-        grid-template-columns: 3fr 3fr 1fr;
+        grid-template-columns: 2fr 2fr 1fr;
     
     }
     #extra-info-table-program-schedule{
-        font-size: 30%;
-        width:80%;
+        font-size: 80%;
+        width: 80%;
         margin-top: 1%;
     }
     #extra-info-table-emergency-codes{
-        font-size: 30%;
-        width:50%;
+        font-size: 80%;
+        width:70%;
         margin-top: 1%;
     }
     #extra-info-table-imax{
@@ -143,14 +145,31 @@ button{
         font-size: 30%;
         margin-top: 1%;
     }
-
     .extra-info-second-line{
         display: grid;
-        grid-template-columns: 3fr 3fr; 
-
+        text-align:left;
+        font-size: 70%;
+        grid-template-columns: 1fr 1fr 8fr;
     }
-
-
+    
+    #extra-info-second-line-missing-person-procedures{
+        margin-top: 0%;
+        margin-left:10%;
+        margin-right:10%;
+        width:90%
+    
+    }
+     
+    #extra-info-second-line-schedule-guide{
+        margin-top: 0%;
+        margin-left: 5%;
+        margin-right: 10%;
+    }
+    
+    #breaks{
+        margin-left: 10%;
+        margin-top: 2%;
+    }
     
     #program_schedule{
         width:20%;
@@ -198,9 +217,37 @@ hr {
     width:50%;
 }
 
-#extra-info-table-emergency-codes, #extra-info-table-program-schedule, #extra-info-table-imax {
-    margin: 10%;
+#extra-info-table-emergency-codes, 
+#extra-info-table-program-schedule,
+#extra-info-table-imax{
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
 
+}
+
+.extra-info-second-line{
+    display: grid;
+    text-align:left;
+    font-size: 60%;
+    margin-top: 1%;
+    grid-template-columns: 1fr 2fr 5fr;
+}
+
+#extra-info-second-line-missing-person-procedures{
+    height:40%;
+    margin-left:10%;
+    margin-right:10%;
+
+}
+ 
+#extra-info-second-line-schedule-guide{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#breaks{
+    margin-left: 10%;
 }
 
 
