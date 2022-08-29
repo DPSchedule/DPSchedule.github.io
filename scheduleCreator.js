@@ -27,6 +27,7 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
     var fdv2 = fdv1 
     var arr2 = [];
     var passOn1 = true; 
+    
     for(var t = 0; t < (fhdv1 + shdv1 + fdv1); t++){
         for(var w = 0; w < 11; w++) {
             
@@ -40,7 +41,7 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
             }
             fhdv2--
             passOn1 = false
-        }
+        } 
 
         if (shdv2 > 0 && passOn1){
             for (var r = 0; r < 5; r++){
@@ -77,75 +78,44 @@ function randomAssignments(number){
 
     switch(true) {
         case (number === 1):
-            var value = isInArray("Scipod Level 3")
-            if(value){
-                return ""
-            } else {
-                arr.push("Scipod Level 3") 
-                return "Scipod Level 3"
-            }
+        
+            var value = "Scipod Level 3"
+            return (isInArray(value) ? "" : (arr.push(value), value));  
+
         case ((number >=2) && (number <=3)):
-            var value = isInArray("Scipod Level 1")
-            if(value){
-                return ""
-            } else {
-                arr.push("Scipod Level 1")
-                return "Scipod Level 1"
-            }
+
+            var value = "Scipod Level 1"
+            return (isInArray(value) ? "" : (arr.push(value), value));
 
         case ((number >=4) && (number <=6)):
-            var value = isInArray("Scipod Level 2")
-            if(value){
-                return ""
-            } else {
-                arr.push("Scipod Level 2")
-                return "Scipod Level 2"
-            }
+
+            var value = "Scipod Level 2"
+            return (isInArray(value) ? "" : (arr.push(value), value));
 
         case ((number >=7) && (number <=10)):
-            var value = isInArray("Kid Science")
-            if(value){
-                return ""
-            } else {
-                arr.push("")
-                return "Kid Science"
-            }
+            
+            var value = "Kid Science"
+            return (isInArray(value) ? "" : (arr.push(value), value));
 
         case ((number >=11) && (number <=15)):
-            var value = isInArray("EMF")
-            if(value){
-                return ""
-            } else {
-                arr.push("EMF")
-                return "EMF"
-            }
+           
+            var value = "EMF"
+            return (isInArray(value) ? "" : (arr.push(value), value));
 
         case ((number >=16) && (number <=21)):
-            var value = isInArray("EMM")
-            if(value){
-                return ""
-            } else {
-                arr.push("EMM")
-                return "EMM"
-            }
+           
+            var value = "EMM"
+            return (isInArray(value) ? "" : (arr.push(value), value));
 
         case ((number >=22) && (number <=28)):
-            var value = isInArray("Thinker Space")
-            if(value){
-                return ""
-            } else {
-                arr.push("Thinker Space")
-                return "Thinker Space" 
-            }
+        
+            var value = "Thinker Space"
+            return (isInArray(value) ? "" : (arr.push(value), value));
 
         case ((number >=29) && (number <=39)):
-            var value = isInArray("EML")
-            if(value){
-                return ""
-            } else {
-                arr.push("EML")
-                return "EML"
-            }
+
+            var value = "EML"
+            return (isInArray(value) ? "" : (arr.push(value), value));
         }
     }
 
