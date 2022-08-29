@@ -8,7 +8,7 @@ To use this program first, go to the website [DPSchedule.github.io](https://DPSc
 
 2). Click the `Generate` button to create the table and the `Reset` button to remove the table.
 
-3). Once the table has been generated, enter all values. Values that need to be filled will be in white boxes.
+3). Once the table has been generated, fill in the respective information into the white boxes.
 
 4). Once complete, simply use Ctrl + P (Windows OS) or Cmd + P (Mac OS) to print the page. Make sure the page layout is set to landscape.
 
