@@ -50,10 +50,9 @@ function splitArray(fhdv1,shdv1,fdv1,labColumn1){
             shdv2--
             passOn1 = false
         }
-        if (fdv2 > 0 && passOn1){
-            arr2[6] = "Lunch"
-            fdv2--
-        }
+        
+        fdv2 > 0 && passOn1 ? arr2[6] = "Lunch" : fdv2--;
+
         addToTable(arr2)
         passOn1 = true
         arr2.length = 0;
@@ -121,7 +120,7 @@ function randomAssignments(number){
 
 function isInArray(valToCheck){
     return arr.includes(valToCheck)
-    
+
 }
 
 function addToTable(array){
